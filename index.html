@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Search</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Site-Wide Header -->
+    <header class="site-header">
+        <div class="header-content">
+            <h1>Project 0</h1>
+        </div>
+    </header>
+
+    <!-- Navigation Links -->
+    <header>
+        <nav>
+            <a href="image_search.html">Image Search</a>
+            <a href="advanced_search.html">Advanced Search</a>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <div class="search-container">
+            <input type="text" id="query" placeholder="Search Google...">
+            <button onclick="searchGoogle()">Google Search</button>
+            <button onclick="feelingLucky()">I'm Feeling Lucky</button>
+        </div>
+    </main>
+    <script>
+        function searchGoogle() {
+            const query = document.getElementById('query').value;
+            if (query) {
+                window.location.href = `https://www.google.com/search?q=${encodeURIComponent(query)}`;
+            }
+        }
+        
+        function feelingLucky() {
+            const query = document.getElementById('query').value;
+            if (query) {
+                window.location.href = `https://www.google.com/search?q=${encodeURIComponent(query)}&btnI`;
+            }
+        }
+    </script>
+</body>
+</html>
